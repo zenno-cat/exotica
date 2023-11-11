@@ -1,0 +1,45 @@
+.title {
+    font-family: var(--forum);
+    font-size: var(--title-fz);
+    line-height: var(--title-lh);
+    font-weight: var(--title-regular);
+    color: var(--brown);
+}
+
+.subtitle {
+    font-family: var(--jost);
+    font-size: var(--subtitle-fz-24);
+    line-height: var(--subtitle-lh-26);
+    font-weight: var(--subtitle-regular);
+    color: var(--brown);
+    &--opacity {
+        opacity: 0.5;
+    }
+    &--white {
+        color: var(--white);
+    }
+    &--secondary {
+        color: var(--brown-secondary);
+    }
+    &--bold {
+        font-weight: var(--subtitle-bold);
+    }
+}
+
+.text {
+    font-family: var(--jost);
+    font-size: var(--text-fz-18);
+    line-height: var(--text-lh-20);
+    font-weight: var(--text-regular);
+    color: var(--brown);
+    &--white {
+        color: var(--white);
+    }
+    &--secondary {
+        color: var(--brown-secondary);
+    }
+    &--bold {
+        font-weight: var(--text-bold);
+    }
+}
+  

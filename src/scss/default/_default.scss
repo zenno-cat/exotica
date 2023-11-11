@@ -1,0 +1,91 @@
+
+body {
+    font-size: var(--text-fz-18);
+    line-height: var(--text-lh-20);
+    font-weight: var(--text-regular);
+    background-color: var(--white);
+    font-family: var(--jost);
+    color: var(--brown);
+    &.active {
+      overflow: hidden;
+    }
+  }
+
+  a {
+    color: var(--brown);
+    transition: var(--transition);
+    &:hover {
+      color: var(--brown-50);
+    }
+  }
+  
+  * {
+    font-size: var(--text-fz-18);
+    line-height: var(--text-lh-20);
+    font-weight: var(--text-regular);
+    background-color: var(--white);
+    font-family: var(--jost);
+    color: var(--brown);
+  }
+  
+  *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      word-wrap: break-word;
+    }
+    
+    img {
+      display: block;
+    }
+    
+    a {
+      text-decoration: none;
+      display: block;
+    }
+    
+    button {
+      border: none;
+      background-color: transparent;
+    }
+    
+    h1, h2, h3, h4, h5, h6, p {
+      margin: 0;
+      padding: 0;
+    }
+    
+    ul, li {
+      padding: 0;
+      margin: 0;
+    }
+    
+    input::-moz-placeholder {
+      box-sizing: border-box;
+      font-family: var(--first-font);
+    }
+    
+    input, input::placeholder {
+      box-sizing: border-box;
+      font-family: var(--first-font);
+    }
+    
+  
+  .wrapper {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* высота веб-страницы больше или равна высоте окна браузера */
+      margin: 0;
+      overflow: hidden;
+  
+  }
+  
+  .content {
+      flex: 1; /* если содержимое body меньше высоты окна, то section будет растянут до нужной величины */
+      // white-space: pre-line;
+      -ms-flex-preferred-size: auto;
+  }
+
+  .container {
+    max-width: 1427px;
+  }

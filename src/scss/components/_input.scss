@@ -1,0 +1,33 @@
+.input {
+    font-family: var(--jost);
+    font-size: var(--input-fz-16);
+    line-height: var(--input-lh-20);
+    color: var(--brown);
+    padding: var(--input-padding);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border);
+    background-color: var(--white);
+    transition: var(--transition);
+    font-weight: var(--input-bold);
+    outline: none;
+    width: 100%;
+    max-width: 415px;
+
+    &::placeholder {
+        font-family: var(--jost);
+        font-size: var(--input-fz-16);
+        line-height: var(--input-lh-20);
+        color: var(--brown);
+    }
+    &:not(.input--error):hover {
+        border-color: var(--brown);
+    }
+    &:not(.input--error):active, &:not(.input--error):focus {
+        border-color: var(--brown);
+    }
+
+    &--error {
+        border-color: var(--red);
+    }
+
+}
