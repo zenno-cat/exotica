@@ -1,0 +1,23 @@
+.studio {
+    padding-top: var(--section-padding-top-110);
+    &__slides {
+        display: flex;
+        gap: 16px;
+    }
+    &__slider-navigation {
+        margin: 0 auto;
+        margin-top: var(--slider-navigation-margin-y-24);
+        width: fit-content;
+    }
+    &__subtitle {
+        max-width: 788px;
+        margin: 0 auto;
+        margin-top: var(--subtitle-margin-y-12);
+        text-align: center;
+    }
+    &__slider {
+        margin-top: var(--slider-magin-y-40);
+        padding-top: var(--slider-padding-y-40);
+        padding-bottom: var(--slider-padding-y-40);
+    }
+}

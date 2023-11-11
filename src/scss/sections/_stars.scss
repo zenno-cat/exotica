@@ -1,6 +1,18 @@
 .stars {
-    padding: var(--section-paddig-y-110);
+    margin-top: var(--intro-margin-top-100);
+    padding-top: var(--section-padding-top-110);
+    padding-bottom: var(--section-padding-bottom-110);
     &__text {
-        margin-top: var(--stars-gap-y);
+        max-width: 1080px;
+        padding: var(--text-padding-60-80);
+        border: var(--text-border);
+        border-radius: var(--text-border-radius-20);
+        text-align: center;
+        margin: 0 auto;
+        margin-top: var(--offset-y-54);
+        
+        display: flex;
+        flex-direction: column;
+        gap: var(--text-offset-24);
     }
 }

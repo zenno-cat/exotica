@@ -1,9 +1,10 @@
 .title {
     font-family: var(--forum);
-    font-size: var(--title-fz);
-    line-height: var(--title-lh);
+    font-size: var(--title-fz-70);
+    line-height: var(--title-lh-80);
     font-weight: var(--title-regular);
     color: var(--brown);
+    text-align: center;
 }
 
 .subtitle {

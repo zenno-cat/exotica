@@ -1,0 +1,22 @@
+.slider {
+    &__navigation {
+        display: flex;
+        gap: var(--slider-dots-gap-x-12);
+    }
+    &__dot {
+        border-radius: 50%;
+        background-color: var(--brown);
+        width: 6px;
+        height: 6px;
+    }
+    &__slide {
+        width: var(--slide-width);
+        height: var(--slide-height);
+        img {
+            border-radius: var(--slide-border-radius);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
