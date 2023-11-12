@@ -1,0 +1,31 @@
+.story {
+    padding-top: var(--section-padding-top-110);
+    padding-bottom: var(--section-padding-bottom-110);
+    &__subtitle {
+        text-align: center;
+        margin-top: var(--subtitle-margin-y-12);
+    }
+    &__wrapper {
+        margin-top: var(--story-cards-margin-y-64);
+        gap: var(--card-gap-32) 0px;
+    }
+    &__text {
+        margin-top: var(--story-card-text-margin-y-24);
+    }
+    &__button {
+        margin: 0 auto;
+        margin-top: var(--story-button-margin-y-64);
+
+    }
+}
+
+@media (max-width: 767px) {
+    .story {
+        &__caption {
+            text-align: center;
+        }
+        &__text {
+            text-align: center;
+        }
+    }
+}

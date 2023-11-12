@@ -1,10 +1,11 @@
 .benefits {
     padding-top: var(--child-section-padding-y-40);
     padding-bottom: var(--child-section-padding-y-40);
+    margin-bottom: var(--section-margin-bottom-110);
     margin-top: var(--margin-top-y-40);
     &__wrapper {
         margin-top: var(--card-gap-32);
-        gap: 12px 0px;
+        gap: var(--card-gap-32) 0px;
     }
     &__item {
         position: relative;

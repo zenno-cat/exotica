@@ -1,0 +1,10 @@
+.cash {
+    padding-top: var(--offset-y-64);
+    &__subtitle {
+        text-align: center;
+        margin-top: var(--subtitle-margin-y-12);
+    }
+    &__calculator {
+        margin-top: var(--cash-offset-y-64);
+    }
+}

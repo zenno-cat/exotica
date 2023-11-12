@@ -118,9 +118,8 @@
   --slider-next-arrow-color: var(--white);
   //benefits
   --section-padding-top-40: 40px; //mobile 48px
-  --section-padding-bottom-230: 230px; //mobile 0px
+  --section-margin-bottom-110: 110px; //mobile 0px
   --benefits-card-padding-54-24: 54px 24px; //mobile 24px;
-  // --benefits-card-padding-x-24: 24px; //mobile 24px;
   --margin-top-y-40: 0px; //mobile 48px
   --benefits-card-height: 444px; //mobile 348px
   --benefits-card-width: 308px; //mobile 348px
@@ -136,7 +135,8 @@
   --cash-border-radius-60: 60px; //mobile 30px
   --cash-offset-y-64: 64px; //mobile 32px
   --cash-offset-y-12: 12px; //mobile 12px
-  --cash-gap-24: 24px //mobile 24px
+  --calculator-gap-24: 24px; //mobile 24px
+  --calculator-gap-84: 84px; //mobile 24px
   --cash-offset-48: 48px; //mobile 24px
   //vacancy
   --vacancy-card-border-radius-50: 50px; //mobile 30px
@@ -159,51 +159,6 @@
 
 }
 
-.calculator {
-  display: flex;
-  gap: 10px;
-}
-
-.calculator__trigger {
-  font-family: var(--forum);
-  font-size: var(--calc-btn-fz-70);
-  line-height: var(--calc-btn-lh-80);
-  font-weight: var(--title-regular);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: var(--calc-btn-width);
-  height: var(--calc-btn-height);
-  transition: var(--transition);
-
-  background-color: var(--white);
-  color: var(--white);
-  text-shadow: -1px 0 var(--brown), 0 1px var(--brown), 1px 0 var(--brown), 0 -1px var(--brown);
-  border: var(--btn-border);
-
-  &.active {
-    background-color: var(--brown);
-    color: var(--brown);
-    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
-  }
-
-  &.disabled, &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-
-  &:not(:disabled, .active, .disabled):hover {
-    box-shadow: var(--box-shadow);
-  }
-
-  &:not(:disabled, .active, .disabled):active, &:not(:disabled, .active, .disabled):focus {
-    background-color: var(--brown);
-    color: var(--white);
-  }
-
-}
 
 .intro__wrapper {
   display: flex;
@@ -219,12 +174,15 @@
 @import "./sections/dreamteam";
 @import "./sections/studio";
 @import "./sections/benefits";
+@import "./sections/story";
+@import "./sections/cash";
 @import "./sections/footer";
 //COMPONENTS
 @import "./components/_text";
 @import "./components/_button";
 @import "./components/_input";
 @import "./components/_slider";
+@import "./components/_calculator";
 
 
 @media (max-width: 1199px) {
@@ -303,5 +261,10 @@
 
     //benefits
     --margin-top-y-40: 48px; //mobile 48px
+    --section-margin-bottom-110: 12px; //mobile 0px
+    //story
+    --story-cards-margin-y-64: 40px; //mobile 40px
+    --story-card-text-margin-y-24: 8px; //mobile 8px
+    --story-button-margin-y-64: 48px; //mobile 48px
   }
 }

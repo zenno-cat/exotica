@@ -98,7 +98,7 @@
   --slider-prev-arrow-color: var(--brown-50);
   --slider-next-arrow-color: var(--white);
   --section-padding-top-40: 40px;
-  --section-padding-bottom-230: 230px;
+  --section-margin-bottom-110: 110px;
   --benefits-card-padding-54-24: 54px 24px;
   --margin-top-y-40: 0px;
   --benefits-card-height: 444px;
@@ -112,7 +112,8 @@
   --cash-border-radius-60: 60px;
   --cash-offset-y-64: 64px;
   --cash-offset-y-12: 12px;
-  --cash-gap-24: 24px //mobile 24px
+  --calculator-gap-24: 24px;
+  --calculator-gap-84: 84px;
   --cash-offset-48: 48px;
   --vacancy-card-border-radius-50: 50px;
   --vacancy-card-padding-32-24: 32px 24px;
@@ -128,46 +129,6 @@
   --form-margin-y-16: 16px;
   --form-offset-32: 32px;
   --form-offset-130: 130px;
-}
-
-.calculator {
-  display: flex;
-  gap: 10px;
-}
-
-.calculator__trigger {
-  font-family: var(--forum);
-  font-size: var(--calc-btn-fz-70);
-  line-height: var(--calc-btn-lh-80);
-  font-weight: var(--title-regular);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: var(--calc-btn-width);
-  height: var(--calc-btn-height);
-  transition: var(--transition);
-  background-color: var(--white);
-  color: var(--white);
-  text-shadow: -1px 0 var(--brown), 0 1px var(--brown), 1px 0 var(--brown), 0 -1px var(--brown);
-  border: var(--btn-border);
-}
-.calculator__trigger.active {
-  background-color: var(--brown);
-  color: var(--brown);
-  text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
-}
-.calculator__trigger.disabled, .calculator__trigger:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-.calculator__trigger:not(:disabled, .active, .disabled):hover {
-  box-shadow: var(--box-shadow);
-}
-.calculator__trigger:not(:disabled, .active, .disabled):active, .calculator__trigger:not(:disabled, .active, .disabled):focus {
-  background-color: var(--brown);
-  color: var(--white);
 }
 
 .intro__wrapper {
@@ -493,11 +454,12 @@ input, input::placeholder {
 .benefits {
   padding-top: var(--child-section-padding-y-40);
   padding-bottom: var(--child-section-padding-y-40);
+  margin-bottom: var(--section-margin-bottom-110);
   margin-top: var(--margin-top-y-40);
 }
 .benefits__wrapper {
   margin-top: var(--card-gap-32);
-  gap: 12px 0px;
+  gap: var(--card-gap-32) 0px;
 }
 .benefits__item {
   position: relative;
@@ -548,6 +510,45 @@ input, input::placeholder {
   align-items: center;
   position: relative;
   z-index: 2;
+}
+
+.story {
+  padding-top: var(--section-padding-top-110);
+  padding-bottom: var(--section-padding-bottom-110);
+}
+.story__subtitle {
+  text-align: center;
+  margin-top: var(--subtitle-margin-y-12);
+}
+.story__wrapper {
+  margin-top: var(--story-cards-margin-y-64);
+  gap: var(--card-gap-32) 0px;
+}
+.story__text {
+  margin-top: var(--story-card-text-margin-y-24);
+}
+.story__button {
+  margin: 0 auto;
+  margin-top: var(--story-button-margin-y-64);
+}
+
+@media (max-width: 767px) {
+  .story__caption {
+    text-align: center;
+  }
+  .story__text {
+    text-align: center;
+  }
+}
+.cash {
+  padding-top: var(--offset-y-64);
+}
+.cash__subtitle {
+  text-align: center;
+  margin-top: var(--subtitle-margin-y-12);
+}
+.cash__calculator {
+  margin-top: var(--cash-offset-y-64);
 }
 
 .footer {
@@ -839,6 +840,54 @@ input, input::placeholder {
     transform: none;
   }
 }
+.calculator {
+  display: flex;
+  justify-content: center;
+}
+.calculator__row-top {
+  gap: var(--calculator-gap-84);
+}
+.calculator__column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--calculator-gap-24);
+  max-width: 350px;
+}
+.calculator__trigger {
+  font-family: var(--forum);
+  font-size: var(--calc-btn-fz-70);
+  line-height: var(--calc-btn-lh-80);
+  font-weight: var(--title-regular);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: var(--calc-btn-width);
+  height: var(--calc-btn-height);
+  transition: var(--transition);
+  background-color: var(--white);
+  color: var(--white);
+  text-shadow: -1px 0 var(--brown), 0 1px var(--brown), 1px 0 var(--brown), 0 -1px var(--brown);
+  border: var(--btn-border);
+}
+.calculator__trigger.active {
+  background-color: var(--brown);
+  color: var(--brown);
+  text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
+}
+.calculator__trigger.disabled, .calculator__trigger:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.calculator__trigger:not(:disabled, .active, .disabled):hover {
+  box-shadow: var(--box-shadow);
+}
+.calculator__trigger:not(:disabled, .active, .disabled):active, .calculator__trigger:not(:disabled, .active, .disabled):focus {
+  background-color: var(--brown);
+  color: var(--white);
+}
+
 @media (max-width: 767px) {
   :root {
     --title-fz-70: 32px;
@@ -887,5 +936,9 @@ input, input::placeholder {
     --slider-prev-arrow-color: var(--brown-50);
     --slider-next-arrow-color: var(--brown);
     --margin-top-y-40: 48px;
+    --section-margin-bottom-110: 12px;
+    --story-cards-margin-y-64: 40px;
+    --story-card-text-margin-y-24: 8px;
+    --story-button-margin-y-64: 48px;
   }
 }
