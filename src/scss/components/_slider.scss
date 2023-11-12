@@ -1,22 +1,64 @@
 .slider {
     &__navigation {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+    &__bullet {
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid var(--brown);
+        width: 5px!important;
+        height: 5px!important;
+        &.active  {
+            background-color: var(--brown);
+        }
+    }
+    &__pagination {
+        display: flex;
         gap: var(--slider-dots-gap-x-12);
     }
-    &__dot {
-        border-radius: 50%;
-        background-color: var(--brown);
-        width: 6px;
-        height: 6px;
+    &__arrow {
+        position: absolute;
+        top: 47%;
+        transform: translateY(-50%);
+        z-index: 1;
+        span {
+            font-size: var(--slider-arrow-width);
+            line-height: var(--slider-arrow-width);
+        }
+
+        &-prev {
+            left: 1%;
+            span {
+                color: var(--slider-prev-arrow-color);
+            }
+        }
+        &-next {
+            right: 1%;
+            span {
+                color: var(--slider-next-arrow-color);
+            }
+        }
     }
     &__slide {
-        width: var(--slide-width);
-        height: var(--slide-height);
+        width: var(--slide-width)!important;
+        height: var(--slide-height)!important;
         img {
             border-radius: var(--slide-border-radius);
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .slider {
+        &__arrow {
+           position: static;
+           transform: none;
         }
     }
 }

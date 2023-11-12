@@ -6,27 +6,55 @@
       очень нравится клиентам стриминговых веб-сервисов
     </p>
 
-    <div class="studio__slider slider">
-      <div class="studio__slider-wrapper slider__wrapper">
-        <div class="studio__slides slider__slides">
-          <div class="studio__slider-slide slider__slide">
-            <img src="@img/card-1.png" alt="slide-1" />
-          </div>
-          <div class="studio__slider-slide slider__slide">
-            <img src="@img/card-2.png" alt="slide-2" />
-          </div>
-          <div class="studio__slider-slide slider__slide">
-            <img src="@img/card-2.png" alt="slide-3" />
-          </div>
+    <div class="studio__slider slider swiper">
+      <div class="studio__slider-wrapper slider__wrapper swiper-wrapper">
+        <a
+          href="@img/card-1.png"
+          [data-fancybox]
+          class="studio__slider-slide slider__slide swiper-slide"
+        >
+          <img src="@img/card-1.png" alt="slide-1" />
+        </a>
+        <a
+          href="@img/card-1.png"
+          [data-fancybox]
+          class="studio__slider-slide slider__slide swiper-slide"
+        >
+          <img src="@img/card-2.png" alt="slide-2" />
+        </a>
+        <a
+          href="@img/card-1.png"
+          [data-fancybox]
+          class="studio__slider-slide slider__slide swiper-slide"
+        >
+          <img src="@img/card-1.png" alt="slide-3" />
+        </a>
+      </div>
+      <div class="studio__slider-navigation slider__navigation">
+        <button
+          class="slider__arrow slider__arrow-prev"
+          tabindex="-1"
+          role="button"
+          aria-label="Previous slide"
+        >
+          <span class="fa-solid fa-angle-left"></span>
+        </button>
+        <div class="studio__slider-pagination slider__pagination">
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
         </div>
-        <div class="studio__slider-navigation slider__navigation">
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-        </div>
+        <button
+          class="slider__arrow slider__arrow-next"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+        >
+          <span class="fa-solid fa-angle-right"></span>
+        </button>
       </div>
     </div>
   </div>

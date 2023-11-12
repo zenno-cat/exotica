@@ -28,16 +28,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //slider
-  const slider = document.querySelector(".location__slider");
+  const slider = document.querySelector(".slider");
   if (slider) {
-    new Swiper(".location__slider", {
-      autoplay: true,
-      loop: true,
+    new Swiper(".slider", {
+      // autoplay: true,
+      // loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 16,
       navigation: {
         nextEl: ".slider__arrow-next",
         prevEl: ".slider__arrow-prev",
       },
-      pagination: { el: ".swiper-pagination" },
+      pagination: {
+        el: ".slider__pagination",
+        bulletClass: "slider__bullet",
+        bulletActiveClass: "active",
+        clickable: true,
+      },
     });
   }
 

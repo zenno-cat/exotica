@@ -212,26 +212,112 @@
       очень нравится клиентам стриминговых веб-сервисов
     </p>
 
-    <div class="studio__slider slider">
-      <div class="studio__slider-wrapper slider__wrapper">
-        <div class="studio__slides slider__slides">
-          <div class="studio__slider-slide slider__slide">
-            <img src="img/card-1.png" alt="slide-1" />
-          </div>
-          <div class="studio__slider-slide slider__slide">
-            <img src="img/card-2.png" alt="slide-2" />
-          </div>
-          <div class="studio__slider-slide slider__slide">
-            <img src="img/card-2.png" alt="slide-3" />
+    <div class="studio__slider slider swiper">
+      <div class="studio__slider-wrapper slider__wrapper swiper-wrapper">
+        <a
+          href="img/card-1.png"
+          [data-fancybox]
+          class="studio__slider-slide slider__slide swiper-slide"
+        >
+          <img src="img/card-1.png" alt="slide-1" />
+        </a>
+        <a
+          href="img/card-1.png"
+          [data-fancybox]
+          class="studio__slider-slide slider__slide swiper-slide"
+        >
+          <img src="img/card-2.png" alt="slide-2" />
+        </a>
+        <a
+          href="img/card-1.png"
+          [data-fancybox]
+          class="studio__slider-slide slider__slide swiper-slide"
+        >
+          <img src="img/card-1.png" alt="slide-3" />
+        </a>
+      </div>
+      <div class="studio__slider-navigation slider__navigation">
+        <button
+          class="slider__arrow slider__arrow-prev"
+          tabindex="-1"
+          role="button"
+          aria-label="Previous slide"
+        >
+          <span class="fa-solid fa-angle-left"></span>
+        </button>
+        <div class="studio__slider-pagination slider__pagination">
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+          <button class="slider__bullet" aria-label="Slider bullet"></button>
+        </div>
+        <button
+          class="slider__arrow slider__arrow-next"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+        >
+          <span class="fa-solid fa-angle-right"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="benefits">
+  <div class="container">
+    <h2 class="benefits__title title title--50">OUR BENIFITS</h2>
+    <div class="benefits__wrapper row">
+      <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+        <div class="benefits__item benefits__item-1">
+          <div class="benefits__text">
+            <h3
+              class="benefits__caption subtitle subtitle--white subtitle--bold"
+            >
+              HI-TECH WEBCAM
+            </h3>
           </div>
         </div>
-        <div class="studio__slider-navigation slider__navigation">
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
-          <button class="slider__dot" aria-label="Slider dot"></button>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+        <div class="benefits__item benefits__item-2 active">
+          <div class="benefits__text">
+            <h3
+              class="benefits__caption subtitle subtitle--white subtitle--bold"
+            >
+              VR TECHNOLOGY FOR WEBCAM
+            </h3>
+            <p class="benefits__description text text--white">
+              Мы идём в ногу со временем, наши клиенты могут наслаждаться
+              просмотром модели в VR шлеме виртуальной реальности, обзор 360
+              градусов.Окунитесь с головой в современные технологии.
+              Почувствуйте, как качественное и уникальное оборудование позволяет
+              веб модели зарабатывать значительно больше своих коллег.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+        <div class="benefits__item benefits__item-3">
+          <div class="benefits__text">
+            <h3
+              class="benefits__caption subtitle subtitle--white subtitle--bold"
+            >
+              ПОДДЕРЖКА 24/7 ДЛЯ МОДЕЛЕЙ
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+        <div class="benefits__item benefits__item-4">
+          <div class="benefits__text">
+            <h3
+              class="benefits__caption subtitle subtitle--white subtitle--bold"
+            >
+              БЕЗОПАСНОСТЬ МОДЕЛЕЙ
+            </h3>
+          </div>
         </div>
       </div>
     </div>
@@ -243,8 +329,8 @@
     </div>
 
     <script src="js/lib/bootstrap.min.js"></script>
-    <!-- <script src="js/lib/swiper-bundle.min.js"></script> -->
-    <!-- <script src="js/lib/fancybox.umd.js"></script> -->
+    <script src="js/lib/swiper-bundle.min.js"></script>
+    <script src="js/lib/fancybox.umd.js"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>

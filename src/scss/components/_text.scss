@@ -5,7 +5,12 @@
     font-weight: var(--title-regular);
     color: var(--brown);
     text-align: center;
+    &--50 {
+        font-size: var(--title-fz-50);
+        line-height: var(--title-lh-50);
+    }
 }
+
 
 .subtitle {
     font-family: var(--jost);

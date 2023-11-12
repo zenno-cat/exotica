@@ -113,9 +113,17 @@
   --slide-width: 577px; //mobile 241px
   --slide-height: 565px; //mobile 350px
   --slide-border-radius: 50px; //mobile 30px
+  --slider-arrow-width: 30px; //mobile 20px
+  --slider-prev-arrow-color: var(--brown-50);
+  --slider-next-arrow-color: var(--white);
   //benefits
   --section-padding-top-40: 40px; //mobile 48px
   --section-padding-bottom-230: 230px; //mobile 0px
+  --benefits-card-padding-54-24: 54px 24px; //mobile 24px;
+  // --benefits-card-padding-x-24: 24px; //mobile 24px;
+  --margin-top-y-40: 0px; //mobile 48px
+  --benefits-card-height: 444px; //mobile 348px
+  --benefits-card-width: 308px; //mobile 348px
   //card
   --card-gap-24: 24px //mobile 12px;
   --card-padding-54-24: 54px 24px; //mobile 54px 24px
@@ -210,6 +218,7 @@
 @import "./sections/stars";
 @import "./sections/dreamteam";
 @import "./sections/studio";
+@import "./sections/benefits";
 @import "./sections/footer";
 //COMPONENTS
 @import "./components/_text";
@@ -230,6 +239,8 @@
   :root {
     --title-fz-70: 32px;
     --title-lh-80: 34px;
+    --title-fz-50: 24px;
+    --title-lh-50: 26px;
     --subtitle-fz-24: 18px;
     --subtitle-lh-26: 20px;
     --text-fz-18: 16px;
@@ -278,13 +289,19 @@
     //studio
     --subtitle-margin-y-12: 24px; //mobile 24px
     //slider
-    --slider-margin-y-40: 40px; //mobile 48px;
-    --slider-padding-y-40: 40px; //mobile 0px;
-    --slide-gap-x-16: 16px; //mobile 12px;
+    --slider-margin-y-40: 48px; //mobile 48px;
+    --slider-padding-y-40: 0px; //mobile 0px;
+    --slide-gap-x-16: 12px; //mobile 12px;
     --slider-navigation-margin-y-24: 12px; //mobile 12px;
     --slider-dots-gap-x-12: 12px; //mobile 12px;
     --slide-width: 241px; //mobile 241px
     --slide-height: 350px; //mobile 350px
     --slide-border-radius: 30px; //mobile 30px
+    --slider-arrow-width: 20px; //mobile 20px
+    --slider-prev-arrow-color: var(--brown-50);
+    --slider-next-arrow-color: var(--brown);
+
+    //benefits
+    --margin-top-y-40: 48px; //mobile 48px
   }
 }

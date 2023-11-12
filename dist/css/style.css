@@ -94,8 +94,15 @@
   --slide-width: 577px;
   --slide-height: 565px;
   --slide-border-radius: 50px;
+  --slider-arrow-width: 30px;
+  --slider-prev-arrow-color: var(--brown-50);
+  --slider-next-arrow-color: var(--white);
   --section-padding-top-40: 40px;
   --section-padding-bottom-230: 230px;
+  --benefits-card-padding-54-24: 54px 24px;
+  --margin-top-y-40: 0px;
+  --benefits-card-height: 444px;
+  --benefits-card-width: 308px;
   --card-gap-24: 24px //mobile 12px;
   --card-padding-54-24: 54px 24px;
   --card-text-margin-top-24: 24px;
@@ -478,9 +485,69 @@ input, input::placeholder {
   text-align: center;
 }
 .studio__slider {
-  margin-top: var(--slider-magin-y-40);
+  margin-top: var(--slider-margin-y-40);
   padding-top: var(--slider-padding-y-40);
   padding-bottom: var(--slider-padding-y-40);
+}
+
+.benefits {
+  padding-top: var(--child-section-padding-y-40);
+  padding-bottom: var(--child-section-padding-y-40);
+  margin-top: var(--margin-top-y-40);
+}
+.benefits__wrapper {
+  margin-top: var(--card-gap-32);
+  gap: 12px 0px;
+}
+.benefits__item {
+  position: relative;
+  border-radius: var(--vacancy-card-border-radius-50);
+  height: var(--benefits-card-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: var(--benefits-card-padding-54-24);
+}
+.benefits__item.active:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--vacancy-card-border-radius-50);
+  background-color: rgba(153, 107, 74, 0.8);
+  z-index: 1;
+}
+.benefits__item-1 {
+  background-image: url("../img/benefits-1.jpg");
+}
+.benefits__item-2 {
+  background-image: url("../img/benefits-2.jpg");
+}
+.benefits__item-3 {
+  background-image: url("../img/benefits-3.jpg");
+}
+.benefits__item-4 {
+  background-image: url("../img/benefits-4.jpg");
+}
+.benefits__caption {
+  text-align: center;
+}
+.benefits__description {
+  text-align: center;
+}
+.benefits__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .footer {
@@ -582,6 +649,10 @@ input, input::placeholder {
   font-weight: var(--title-regular);
   color: var(--brown);
   text-align: center;
+}
+.title--50 {
+  font-size: var(--title-fz-50);
+  line-height: var(--title-lh-50);
 }
 
 .subtitle {
@@ -711,17 +782,49 @@ input, input::placeholder {
 
 .slider__navigation {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.slider__bullet {
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--brown);
+  width: 5px !important;
+  height: 5px !important;
+}
+.slider__bullet.active {
+  background-color: var(--brown);
+}
+.slider__pagination {
+  display: flex;
   gap: var(--slider-dots-gap-x-12);
 }
-.slider__dot {
-  border-radius: 50%;
-  background-color: var(--brown);
-  width: 6px;
-  height: 6px;
+.slider__arrow {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.slider__arrow span {
+  font-size: var(--slider-arrow-width);
+  line-height: var(--slider-arrow-width);
+}
+.slider__arrow-prev {
+  left: 1%;
+}
+.slider__arrow-prev span {
+  color: var(--slider-prev-arrow-color);
+}
+.slider__arrow-next {
+  right: 1%;
+}
+.slider__arrow-next span {
+  color: var(--slider-next-arrow-color);
 }
 .slider__slide {
-  width: var(--slide-width);
-  height: var(--slide-height);
+  width: var(--slide-width) !important;
+  height: var(--slide-height) !important;
 }
 .slider__slide img {
   border-radius: var(--slide-border-radius);
@@ -731,9 +834,17 @@ input, input::placeholder {
 }
 
 @media (max-width: 767px) {
+  .slider__arrow {
+    position: static;
+    transform: none;
+  }
+}
+@media (max-width: 767px) {
   :root {
     --title-fz-70: 32px;
     --title-lh-80: 34px;
+    --title-fz-50: 24px;
+    --title-lh-50: 26px;
     --subtitle-fz-24: 18px;
     --subtitle-lh-26: 20px;
     --text-fz-18: 16px;
@@ -764,13 +875,17 @@ input, input::placeholder {
     --card-img-width-100: 50px;
     --card-img-height-100: 50px;
     --subtitle-margin-y-12: 24px;
-    --slider-margin-y-40: 40px;
-    --slider-padding-y-40: 40px;
-    --slide-gap-x-16: 16px;
+    --slider-margin-y-40: 48px;
+    --slider-padding-y-40: 0px;
+    --slide-gap-x-16: 12px;
     --slider-navigation-margin-y-24: 12px;
     --slider-dots-gap-x-12: 12px;
     --slide-width: 241px;
     --slide-height: 350px;
     --slide-border-radius: 30px;
+    --slider-arrow-width: 20px;
+    --slider-prev-arrow-color: var(--brown-50);
+    --slider-next-arrow-color: var(--brown);
+    --margin-top-y-40: 48px;
   }
 }
