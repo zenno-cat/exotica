@@ -1,5 +1,10 @@
 .cash {
     padding-top: var(--offset-y-64);
+    &__wrapper {
+        padding: var(--cash-padding-32);
+        background-color: var(--beige);
+        border-radius: var(--cash-border-radius-60);
+    }
     &__subtitle {
         text-align: center;
         margin-top: var(--subtitle-margin-y-12);
@@ -7,4 +12,122 @@
     &__calculator {
         margin-top: var(--cash-offset-y-64);
     }
+    &__months {
+        text-align: center;
+    }
+    &__sum-text {
+        margin-top: var(--cash-offset-y-64);
+        text-align: center;
+    }
+    &__divider {
+        margin-top: var(--cash-offset-y-64);
+    }
+    &__caption {
+        text-align: center;
+    }
+    &__item {
+        display: flex;
+        max-width: 630px;
+        flex-direction: column;
+        gap: var(--cash-offset-y-12);
+    }
+    &__bottom-title.title {
+        text-align: left;
+    }
+    &__row-bottom {
+        display: flex;
+        gap: var(--calculator-gap-24);
+        flex-wrap: wrap;
+    }
+    &__success {
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--cash-offset-y-24);
+            width: 236px;
+        }
+        &-header {
+            position: relative;
+            &:after {
+                content: "1";
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                transform: translateY(-50%);
+                font-size: 88px;
+                line-height: 64px;
+                color: var(--brown);
+                opacity: 0.1;
+                font-weight: bold;
+            }
+            &-2 {
+                &:after {
+                    content: "2";
+                }
+            }
+        }
+        &-header {
+            position: relative;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            &:after {
+                content: "1";
+                position: absolute;
+                top: 50%;
+                right: -30px;
+                transform: translateY(-50%);
+                font-size: 88px;
+                line-height: 64px;
+                color: var(--brown);
+                opacity: 0.1;
+                font-weight: bold;
+            }
+            &-2 {
+                &:after {
+                    content: "2";
+                }
+            }
+            &-3 {
+                &:after {
+                    content: "3";
+                }
+            }
+            &-4 {
+                &:after {
+                    content: "4";
+                }
+            }
+            &-5 {
+                &:after {
+                    content: "5";
+                }
+            }
+            &-6 {
+                &:after {
+                    content: "6";
+                }
+            }
+        }
+        &-counter {
+            font-size: 88px;
+            line-height: 64px;
+            color: var(--brown);
+            opacity: 0.1;
+            font-weight: bold;
+            
+        }
+    }
+    &__button {
+        margin: 0 auto;
+    }
 }
+
+// @media (max-width: 575px) {
+//     .cash {
+//         &__success-item {
+//             width: 100%;
+
+//         }
+//     }
+// }
