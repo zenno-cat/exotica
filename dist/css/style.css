@@ -123,8 +123,10 @@
   --vacancy-card-gap-12-4: 12px 4px;
   --vacancy-card-margin-y-86: 86px;
   --vacancy-card-hover-shadow: 0px 0px 20px 5px rgba(154, 115, 86, 0.30);
-  --faq-item-padding-y-24: 24px;
+  --faq-item-padding-top-24: 24px;
+  --faq-item-padding-bottom-48: 48px;
   --faq-item-interval-y-24: 24px;
+  --faq-item-gap-24: 24px;
   --feedback-card-padding-24: 24px;
   --feedback-card-row-interval-y: 12px;
   --feedback-button-gap-24: 24px;
@@ -756,6 +758,52 @@ input, input::placeholder {
   margin-top: 12px;
 }
 
+.faq {
+  padding-top: var(--section-padding-top-110);
+}
+.faq__subtitle {
+  margin-top: var(--subtitle-margin-y-12);
+  text-align: center;
+}
+.faq__wrapper {
+  margin-top: var(--offset-y-54);
+}
+.faq__item {
+  padding-top: var(--faq-item-padding-bottom-48);
+  padding-bottom: var(--faq-item-padding-bottom-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--faq-item-gap-24);
+}
+.faq__divider {
+  position: relative;
+  background-color: var(--brown-50);
+}
+.faq__divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid var(--brown-50);
+}
+.faq__divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid var(--brown-50);
+}
+
 .footer {
   padding-top: var(--padding-top-120);
   padding-bottom: 58px;
@@ -1180,5 +1228,9 @@ input, input::placeholder {
     --cash-offset-y-32: 32px;
     --cash-offset-y-24: 12px;
     --cash-padding-32: 32px 24px;
+    --faq-item-padding-top-24: 12px;
+    --faq-item-padding-bottom-48: 16px;
+    --faq-item-interval-y-24: 16px;
+    --faq-item-gap-24: 12px;
   }
 }

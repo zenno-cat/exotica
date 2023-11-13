@@ -148,8 +148,10 @@
   --vacancy-card-margin-y-86: 86px; //mobile 32px
   --vacancy-card-hover-shadow: 0px 0px 20px 5px rgba(154, 115, 86, 0.30);
   //faq
-  --faq-item-padding-y-24: 24px; //mobile 8px
+  --faq-item-padding-top-24: 24px; //mobile 8px
+  --faq-item-padding-bottom-48: 48px; //mobile 16px;
   --faq-item-interval-y-24: 24px; //mobile 16px
+  --faq-item-gap-24: 24px; //mobile 12px  
   //feedback
   --feedback-card-padding-24: 24px; //mobile 24px
   --feedback-card-row-interval-y: 12px; //mobile 12px
@@ -188,6 +190,7 @@
 @import "./sections/story";
 @import "./sections/cash";
 @import "./sections/vacancy";
+@import "./sections/faq";
 @import "./sections/footer";
 //COMPONENTS
 @import "./components/_text";
@@ -289,5 +292,10 @@
     --cash-offset-y-32: 32px; //mobile 
     --cash-offset-y-24: 12px; //mobile 12px
     --cash-padding-32: 32px 24px; //32px 24px
+    //faq
+    --faq-item-padding-top-24: 12px; //mobile 8px
+    --faq-item-padding-bottom-48: 16px; //mobile 16px;
+    --faq-item-interval-y-24: 16px; //mobile 16px
+    --faq-item-gap-24: 12px; //mobile 12px  
   }
 }
