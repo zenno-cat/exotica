@@ -22,6 +22,7 @@
     &__caption {
         text-transform: uppercase;
         text-align: center;
+        min-height: 60px;
     }
 
     &__list {
@@ -34,7 +35,8 @@
         gap: 12px 4px;
         flex-wrap: wrap;
         max-width: 286px;
-        max-height: 269px;
+        max-height: 296px;
+        min-height: 296px;
 
         &-item {
             position: relative;
