@@ -1,0 +1,69 @@
+.vacancy {
+    padding-top: var(--section-padding-top-110);
+    padding-bottom: var(--section-padding-bottom-110);
+
+    &__wrapper {
+        margin-top: var(--offset-y-64);
+        gap: 24px 0px;
+    }
+
+    &__item {
+        background-color: var(--beige);
+        border-radius: var(--vacancy-card-border-radius-50);
+        padding: var(--vacancy-card-padding-32-24);
+        transition: var(--transition);
+        max-width: 335px;
+        // width: 100%;
+        
+        &:hover {
+            box-shadow: var(--vacancy-card-hover-shadow);
+        }
+    }
+    &__caption {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0 auto;
+
+        margin-top: var(--card-gap-32);
+        display: flex;
+        flex-direction: column;
+        gap: 12px 4px;
+        flex-wrap: wrap;
+        max-width: 286px;
+        max-height: 269px;
+
+        &-item {
+            position: relative;
+            width: 49%;
+            padding-left: 16px;
+            &:before {
+                position: absolute;
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                border: 1px solid var(--brown);
+                top: 50%;
+                left: 0px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    
+    &__item-salary {
+        margin-top: var(--card-gap-32);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px 0px;
+    }
+
+    &__button.button {
+        width: 100%;
+        margin-top: 12px;
+    }
+}
