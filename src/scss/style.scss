@@ -155,7 +155,14 @@
   //feedback
   --feedback-card-padding-24: 24px; //mobile 24px
   --feedback-card-row-interval-y: 12px; //mobile 12px
+  --feedback-user-gap-24: 24px; //mobile 8px
   --feedback-button-gap-24: 24px; //mobile 8px
+  --feedback-card-border-radius-30: 30px; //mobile 30px
+  --feedback-box-shadow: 0px 0px 13px 0px rgba(22, 22, 23, 0.10);
+  --feedback-comments-gap: 32px; //mobile 12px
+  --feedback-padding-bottom: 80px; //mobile 12px
+  --feedback-photo-width: 48px; //mobile 32px
+  --feedback-photo-height: 48px; //mobile 32px
   //form
   --form-padding-64: 64px; //mobile 24px 12px
   --form-input-gap-16: 16px; //mobile 8px
@@ -191,6 +198,7 @@
 @import "./sections/cash";
 @import "./sections/vacancy";
 @import "./sections/faq";
+@import "./sections/feedback";
 @import "./sections/footer";
 //COMPONENTS
 @import "./components/_text";
@@ -297,5 +305,16 @@
     --faq-item-padding-bottom-48: 16px; //mobile 16px;
     --faq-item-interval-y-24: 16px; //mobile 16px
     --faq-item-gap-24: 12px; //mobile 12px  
+    //feedback
+    --feedback-card-padding-24: 24px; //mobile 24px
+    --feedback-card-row-interval-y: 12px; //mobile 12px
+    --feedback-user-gap-24: 8px; //mobile 8px
+    --feedback-button-gap-24: 8px; //mobile 8px
+    --feedback-card-border-radius-30: 30px; //mobile 30px
+    --feedback-box-shadow: 0px 0px 13px 0px rgba(22, 22, 23, 0.10);
+    --feedback-comments-gap: 12px; //mobile 12px
+    --feedback-padding-bottom: 12px; //mobile 12px
+    --feedback-photo-width: 32px; //mobile 32px
+    --feedback-photo-height: 32px; //mobile 32px
   }
 }

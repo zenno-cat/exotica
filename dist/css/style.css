@@ -129,7 +129,14 @@
   --faq-item-gap-24: 24px;
   --feedback-card-padding-24: 24px;
   --feedback-card-row-interval-y: 12px;
+  --feedback-user-gap-24: 24px;
   --feedback-button-gap-24: 24px;
+  --feedback-card-border-radius-30: 30px;
+  --feedback-box-shadow: 0px 0px 13px 0px rgba(22, 22, 23, 0.10);
+  --feedback-comments-gap: 32px;
+  --feedback-padding-bottom: 80px;
+  --feedback-photo-width: 48px;
+  --feedback-photo-height: 48px;
   --form-padding-64: 64px;
   --form-input-gap-16: 16px;
   --form-margin-y-16: 16px;
@@ -804,6 +811,72 @@ input, input::placeholder {
   border-right: 8px solid var(--brown-50);
 }
 
+.feedback {
+  padding-top: var(--section-padding-top-110);
+  padding-bottom: var(--feedback-padding-bottom);
+}
+.feedback__comments {
+  margin-top: var(--offset-y-64);
+  display: flex;
+  flex-direction: column;
+  gap: var(--feedback-comments-gap);
+}
+.feedback__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0px;
+  padding: var(--feedback-card-padding-24);
+  background-color: var(--beige);
+  border-radius: var(--feedback-card-border-radius-30);
+  transition: var(--transition);
+}
+.feedback__item:hover {
+  box-shadow: var(--feedback-box-shadow);
+}
+.feedback__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback__user {
+  display: flex;
+  align-items: center;
+  gap: var(--feedback-user-gap-24);
+}
+.feedback__photo {
+  width: var(--feedback-photo-width);
+  height: var(--feedback-photo-height);
+  border-radius: 50%;
+}
+.feedback__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feedback__buttons {
+  margin-top: var(--offset-y-64);
+  display: flex;
+  justify-content: center;
+  gap: var(--feedback-button-gap-24);
+}
+.feedback__button.button {
+  width: 250px;
+}
+
+@media (max-width: 767px) {
+  .feedback time {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .feedback__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--feedback-button-gap-24);
+  }
+  .feedback__button.button {
+    width: 100%;
+  }
+}
 .footer {
   padding-top: var(--padding-top-120);
   padding-bottom: 58px;
@@ -1232,5 +1305,15 @@ input, input::placeholder {
     --faq-item-padding-bottom-48: 16px;
     --faq-item-interval-y-24: 16px;
     --faq-item-gap-24: 12px;
+    --feedback-card-padding-24: 24px;
+    --feedback-card-row-interval-y: 12px;
+    --feedback-user-gap-24: 8px;
+    --feedback-button-gap-24: 8px;
+    --feedback-card-border-radius-30: 30px;
+    --feedback-box-shadow: 0px 0px 13px 0px rgba(22, 22, 23, 0.10);
+    --feedback-comments-gap: 12px;
+    --feedback-padding-bottom: 12px;
+    --feedback-photo-width: 32px;
+    --feedback-photo-height: 32px;
   }
 }
