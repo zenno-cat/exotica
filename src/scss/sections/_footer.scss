@@ -1,10 +1,24 @@
 .footer {
     padding-top: var(--section-padding-top-110);
+    padding-bottom: var(--section-padding-top-110);
+    &__wrapper {
+        gap: 24px 0px;
+    }
+    &__logo {
+        width: 215px;
+        height: 48px;
+        img {
+            width: 215px;
+            height: 48px;
+            object-fit: contain;
+        }
+    }
     &__rights {
         margin-top: 144px;
         font-size: 14px;
         line-height: 16px;
         color: var(--brown-secondary);
+        max-width: 166px;
     }
     &__policy {
         margin-top: 24px;
@@ -18,7 +32,7 @@
         }
     }
     &__phone {
-        margin-top: 32px;
+        margin-top: var(--footer-offset-top-32);
     }
     &__contacts {
         &:nth-child(2) {
@@ -30,12 +44,12 @@
         display: flex;
         gap: 0px 24px;
         .social__link span {
-            font-size: 24px;
-            line-height: 24px;
+            font-size: 32px;
+            line-height: 32px;
         }
     }
     &__social-list {
-        margin-top: 35px;
+        margin-top: var(--footer-offset-top-32);
         list-style-type: none;
         display: flex;
         flex-direction: column;
@@ -48,10 +62,78 @@
     }
 
     &__address {
-        margin-top: 24px;
+        margin-top: var(--footer-offset-top-32);
+        margin-bottom: 0px;
+        &-1 {
+            max-width: 213px;
+        }
+        &-2 {
+            max-width: 235px;
+        }
     }
 
     &__button {
         margin-top: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        position: relative;
+        padding-bottom: 80px;
+        &__rights {
+            position: absolute;
+            bottom: 80px;
+            left: 15px;
+            max-width: 100%;
+        }
+        &__policy {
+            position: absolute;
+            bottom: 36px;
+            left: 15px;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .footer {
+        padding-top: 56px;
+        padding-bottom: 140px;
+        &__logo {
+            width: 185px;
+            height: 40px;
+            img {
+                width: 185px;
+                height: 40px;
+            }
+        }
+        &__social {
+            gap: 0px 16px;
+
+        }
+
+        &__social .social__link span {
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__social-item a {
+            gap: 0px 8px;
+        }
+        &__social-item a img {
+            width: 24px;
+            height: 24px;
+        }
+        &__social-list {
+            flex-direction: row;
+            gap: 0px 8px;
+        }
+        &__button.button {
+            width: 100%;
+        }
+        &__address {
+            margin-top: 12px;
+        }
+
     }
 }

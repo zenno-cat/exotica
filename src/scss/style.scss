@@ -169,6 +169,8 @@
   --form-margin-y-16: 16px; //mobile 16px
   --form-offset-32: 32px; //mobile 32px
   --form-offset-130: 130px; //mobile 12px  
+  //footer
+  --footer-offset-top-32: 32px; //mobile 24px
 
 }
 
@@ -323,5 +325,7 @@
       --form-margin-y-16: 16px; //mobile 16px
       --form-offset-32: 32px; //mobile 32px
       --form-offset-130: 12px; //mobile 12px  
-  }
+      //footer
+       --footer-offset-top-32: 24px; //mobile 24px
+    }
 }
