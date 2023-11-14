@@ -199,6 +199,7 @@
 @import "./sections/vacancy";
 @import "./sections/faq";
 @import "./sections/feedback";
+@import "./sections/bid";
 @import "./sections/footer";
 //COMPONENTS
 @import "./components/_text";
@@ -316,5 +317,11 @@
     --feedback-padding-bottom: 12px; //mobile 12px
     --feedback-photo-width: 32px; //mobile 32px
     --feedback-photo-height: 32px; //mobile 32px
+      //form
+      --form-padding-64: 24px 12px; //mobile 24px 12px
+      --form-input-gap-16: 8px; //mobile 8px
+      --form-margin-y-16: 16px; //mobile 16px
+      --form-offset-32: 32px; //mobile 32px
+      --form-offset-130: 12px; //mobile 12px  
   }
 }

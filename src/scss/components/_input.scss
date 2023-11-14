@@ -18,6 +18,7 @@
         font-size: var(--input-fz-16);
         line-height: var(--input-lh-20);
         color: var(--brown);
+        font-weight: 400;
     }
     &:not(.input--error):hover {
         border-color: var(--brown);
