@@ -119,7 +119,7 @@
   --cash-offset-y-24: 24px;
   --cash-padding-32: 32px;
   --vacancy-card-border-radius-50: 50px;
-  --vacancy-card-padding-32-24: 32px 24px;
+  --vacancy-card-padding-32-24: 32px 16px;
   --vacancy-card-gap-12-4: 12px 4px;
   --vacancy-card-margin-y-86: 86px;
   --vacancy-card-hover-shadow: 0px 0px 20px 5px rgba(154, 115, 86, 0.30);
@@ -442,12 +442,18 @@ input, input::placeholder {
 .dreamteam__text {
   text-align: center;
 }
-.dreamteam__button {
+.dreamteam__button.button {
   margin: 0 auto;
   margin-top: var(--offset-top-80);
   margin-bottom: var(--offset-bottom-80);
+  width: 430px;
 }
 
+@media (max-width: 575px) {
+  .dreamteam__button.button {
+    width: 100%;
+  }
+}
 .studio {
   padding-top: var(--section-padding-top-110);
 }
@@ -552,6 +558,9 @@ input, input::placeholder {
   margin: 0 auto;
   margin-top: var(--story-button-margin-y-64);
 }
+.story__button.button {
+  width: 400px;
+}
 
 @media (max-width: 767px) {
   .story__caption {
@@ -559,6 +568,11 @@ input, input::placeholder {
   }
   .story__text {
     text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .story__button.button {
+    width: 100%;
   }
 }
 .cash {
@@ -670,6 +684,9 @@ input, input::placeholder {
 .cash__button {
   margin: 0 auto;
 }
+.cash__button.button {
+  width: 400px;
+}
 
 @media (max-width: 1199px) {
   .cash__success-item {
@@ -702,6 +719,9 @@ input, input::placeholder {
     flex-wrap: wrap;
     flex-direction: column;
   }
+  .cash__button.button {
+    width: 100%;
+  }
 }
 .vacancy {
   padding-top: var(--section-padding-top-110);
@@ -716,7 +736,8 @@ input, input::placeholder {
   border-radius: var(--vacancy-card-border-radius-50);
   padding: var(--vacancy-card-padding-32-24);
   transition: var(--transition);
-  max-width: 335px;
+  width: 100%;
+  max-width: 400px;
 }
 .vacancy__item:hover {
   box-shadow: var(--vacancy-card-hover-shadow);
@@ -764,6 +785,7 @@ input, input::placeholder {
 .vacancy__button.button {
   width: 100%;
   margin-top: 12px;
+  padding: 14px 20px;
 }
 
 .faq {

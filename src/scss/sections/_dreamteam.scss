@@ -27,9 +27,19 @@
     &__text {
         text-align: center;
     }
-    &__button {
+    &__button.button {
         margin: 0 auto;
         margin-top: var(--offset-top-80);
         margin-bottom: var(--offset-bottom-80);
+        width: 430px;
     }
+}
+
+@media (max-width: 575px) {
+    .dreamteam {
+        &__button.button {
+            width: 100%;
+        }
+    }
+
 }

@@ -15,7 +15,10 @@
     &__button {
         margin: 0 auto;
         margin-top: var(--story-button-margin-y-64);
+    }
 
+    &__button.button {
+        width: 400px;
     }
 }
 
@@ -26,6 +29,14 @@
         }
         &__text {
             text-align: center;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .story {
+        &__button.button {
+            width: 100%;
         }
     }
 }

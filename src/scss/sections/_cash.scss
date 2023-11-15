@@ -122,6 +122,9 @@
     &__button {
         margin: 0 auto;
     }
+    &__button.button {
+        width: 400px;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -165,16 +168,10 @@
             gap: var(--calculator-gap-24);
             flex-wrap: wrap;
             flex-direction: column;
-            // padding: 0px 15px;
         }
+        &__button.button {
+            width: 100%;
+        }
+
     }
 }
-
-// @media (max-width: 500px) {
-//     .cash {
-
-//         // &__success-item {
-//         //     width: 250px;
-//         // }
-//     }
-// }

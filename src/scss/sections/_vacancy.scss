@@ -12,8 +12,8 @@
         border-radius: var(--vacancy-card-border-radius-50);
         padding: var(--vacancy-card-padding-32-24);
         transition: var(--transition);
-        max-width: 335px;
-        // width: 100%;
+        width: 100%;
+        max-width:400px;
         
         &:hover {
             box-shadow: var(--vacancy-card-hover-shadow);
@@ -67,5 +67,6 @@
     &__button.button {
         width: 100%;
         margin-top: 12px;
+        padding: 14px 20px;
     }
 }
