@@ -2,29 +2,38 @@
   <div class="container">
     <h2 class="bid__title title">ЗАПОЛНИ АНКЕТУ</h2>
     <div class="bid__wrapper">
-      <form action="#" class="form">
+      <form class="form">
         <div class="form__wrapper row">
           <div class="form__column-left col-12 col-lg-6">
             <p class="form__caption subtitle">Расскажи о себе</p>
             <div class="inputs__wrapper">
-              <input
-                type="text"
-                name="name"
-                class="form__input input"
-                placeholder="Ваше имя"
-              />
-              <input
-                type="text"
-                name="contact"
-                class="form__input input"
-                placeholder="Телефон, телеграм или ссылка"
-              />
-              <input
-                type="number"
-                name="name"
-                class="form__input input"
-                placeholder="Возраст"
-              />
+              <label class="input-wrapper">
+                <input
+                  type="text"
+                  name="name"
+                  class="form__input input"
+                  placeholder="Ваше имя"
+                />
+              </label>
+
+              <label class="input-wrapper">
+                <input
+                  type="text"
+                  name="contact"
+                  class="form__input input"
+                  placeholder="Телефон, телеграм или ссылка"
+                />
+                <!-- <p class="error-text">Важно заполнить это поле</p> -->
+              </label>
+
+              <label class="input-wrapper">
+                <input
+                  type="number"
+                  name="age"
+                  class="form__input input"
+                  placeholder="Возраст"
+                />
+              </label>
             </div>
             <div class="file__wrapper">
               <div class="file__inner-wrap">

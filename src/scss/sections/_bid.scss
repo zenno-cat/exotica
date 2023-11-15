@@ -48,6 +48,19 @@
         max-width: 100%;
     }
 
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0px;
+    }
+
+    .error-text {
+        color: var(--red);
+        font-size: var(--input-fz-16);
+        line-height: var(--input-lh-18);
+        margin-left: 10px;
+    }
+
     .file__wrapper {
         display: flex;
         margin-top: var(--form-offset-32);

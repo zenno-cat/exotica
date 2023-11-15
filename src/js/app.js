@@ -1,4 +1,5 @@
 import calculator from "./modules/calculator.js";
+import form from "./modules/form.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   //burger
@@ -56,4 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //calculator
   calculator();
+
+  //form
+  form();
 });
