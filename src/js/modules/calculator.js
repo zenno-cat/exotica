@@ -2,10 +2,10 @@ export default function calculator() {
   try {
     const daysWrap = document.querySelector("[data-id='days']"),
       hoursWrap = document.querySelector("[data-id='hours']"),
-      summWrap = document.querySelector(".summ");
+      summWrap = document.querySelector("#sum");
 
     let currentDayValue = 4;
-    let currentHoursValue = 6000;
+    let currentHoursValue = 7000;
 
     const activeDaysItem = daysWrap.querySelector(
       `[data-value="${currentDayValue}"]`
@@ -33,7 +33,7 @@ export default function calculator() {
     });
 
     function addActive(target, elementsContainer, type) {
-      if (target.classList.contains("calc__option")) {
+      if (target.classList.contains("calculator__trigger")) {
         if (type === "days") {
           currentDayValue = +target.getAttribute("data-value");
         } else {
@@ -56,7 +56,7 @@ export default function calculator() {
     function multiply(a, b, c = 4) {
       let result = a * b * c;
       result = result.toLocaleString("ru-RU");
-      summWrap.textContent = result + " ₽";
+      summWrap.textContent = result;
     }
   } catch (err) {
     console.log(err);
