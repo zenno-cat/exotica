@@ -1,5 +1,19 @@
 .dreamteam {
     padding-top: var(--section-padding-top-110);
+
+    .container {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -200px;
+            right: 45px;
+            width: 160px;
+            height: 260px;
+            background-image: url(../img/decorative.png);
+            background-size: cover;
+        }
+    }
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -32,6 +46,16 @@
         margin-top: var(--offset-top-80);
         margin-bottom: var(--offset-bottom-80);
         width: 430px;
+    }
+}
+
+@media (max-width: 767px) {
+    .dreamteam {
+        .container {
+            &:after {
+                display: none;
+            }
+        }
     }
 }
 

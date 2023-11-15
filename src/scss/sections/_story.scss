@@ -1,6 +1,19 @@
 .story {
     padding-top: var(--section-padding-top-110);
     padding-bottom: var(--section-padding-bottom-110);
+    .container {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -180px;
+            left: 0px;
+            width: 160px;
+            height: 300px;
+            background-image: url(../img/decorative-2.png);
+            background-size: cover;
+        }
+    }
     &__subtitle {
         text-align: center;
         margin-top: var(--subtitle-margin-y-12);
@@ -24,6 +37,11 @@
 
 @media (max-width: 767px) {
     .story {
+        .container {
+            &:after {
+                display: none;
+            }
+        }
         &__caption {
             text-align: center;
         }

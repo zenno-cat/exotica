@@ -1,5 +1,18 @@
 .cash {
     padding-top: var(--offset-y-64);
+    .container {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 15px;
+            width: 450px;
+            height: 311px;
+            background-image: url(../img/lines.png);
+            background-size: contain;
+        }
+    }
     &__wrapper {
         padding: var(--cash-padding-32);
         background-color: var(--beige);
@@ -137,6 +150,11 @@
 
 @media (max-width: 767px) {
     .cash {
+        .container {
+            &:after {
+            display: none;
+        }
+        }
         &__success-item {
             width: 45%;
         }

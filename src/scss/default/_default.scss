@@ -17,6 +17,9 @@ body {
     &:hover {
       color: var(--brown-50);
     }
+    &:focus, &:active {
+      outline: none;
+    }
   }
   
   * {

@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".slider");
   if (slider) {
     new Swiper(".slider", {
-      // autoplay: true,
-      // loop: true,
+      autoplay: true,
       slidesPerView: "auto",
       spaceBetween: 16,
       navigation: {
@@ -49,7 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //fancybox
+  const fancy = document.querySelector("[data-fancybox]");
+  console.log(fancy);
   if (document.querySelector("[data-fancybox]")) {
+    console.log("fancybox activate");
     Fancybox.bind("[data-fancybox]", {
       groupAttr: false,
     });

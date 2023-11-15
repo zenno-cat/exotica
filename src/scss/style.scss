@@ -187,6 +187,10 @@
   opacity: 0.3;
 }
 
+.fancybox-image {
+  border-radius: var(--slide-border-radius);
+}
+
 
 //default styles
 @import "./default/_default";

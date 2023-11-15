@@ -157,6 +157,10 @@
   opacity: 0.3;
 }
 
+.fancybox-image {
+  border-radius: var(--slide-border-radius);
+}
+
 body {
   font-size: var(--text-fz-18);
   line-height: var(--text-lh-20);
@@ -175,6 +179,9 @@ a {
 }
 a:hover {
   color: var(--brown-50);
+}
+a:focus, a:active {
+  outline: none;
 }
 
 * {
@@ -415,6 +422,19 @@ input, input::placeholder {
 .dreamteam {
   padding-top: var(--section-padding-top-110);
 }
+.dreamteam .container {
+  position: relative;
+}
+.dreamteam .container::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  right: 45px;
+  width: 160px;
+  height: 260px;
+  background-image: url(../img/decorative.png);
+  background-size: cover;
+}
 .dreamteam__wrapper {
   display: flex;
   flex-direction: column;
@@ -449,6 +469,11 @@ input, input::placeholder {
   width: 430px;
 }
 
+@media (max-width: 767px) {
+  .dreamteam .container:after {
+    display: none;
+  }
+}
 @media (max-width: 575px) {
   .dreamteam__button.button {
     width: 100%;
@@ -543,6 +568,19 @@ input, input::placeholder {
   padding-top: var(--section-padding-top-110);
   padding-bottom: var(--section-padding-bottom-110);
 }
+.story .container {
+  position: relative;
+}
+.story .container::after {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: 0px;
+  width: 160px;
+  height: 300px;
+  background-image: url(../img/decorative-2.png);
+  background-size: cover;
+}
 .story__subtitle {
   text-align: center;
   margin-top: var(--subtitle-margin-y-12);
@@ -563,6 +601,9 @@ input, input::placeholder {
 }
 
 @media (max-width: 767px) {
+  .story .container:after {
+    display: none;
+  }
   .story__caption {
     text-align: center;
   }
@@ -577,6 +618,19 @@ input, input::placeholder {
 }
 .cash {
   padding-top: var(--offset-y-64);
+}
+.cash .container {
+  position: relative;
+}
+.cash .container:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  width: 450px;
+  height: 311px;
+  background-image: url(../img/lines.png);
+  background-size: contain;
 }
 .cash__wrapper {
   padding: var(--cash-padding-32);
@@ -694,6 +748,9 @@ input, input::placeholder {
   }
 }
 @media (max-width: 767px) {
+  .cash .container:after {
+    display: none;
+  }
   .cash__success-item {
     width: 45%;
   }
