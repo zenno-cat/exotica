@@ -54,17 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //questions
-  const questions = document.querySelectorAll(".ques__top");
-  if (questions) {
-    questions.forEach((item) => {
-      item.addEventListener("click", () => {
-        const icon = item.querySelector(".ques__icon");
-        icon.classList.toggle("active");
-      });
-    });
-  }
-
   //calculator
   calculator();
 });
