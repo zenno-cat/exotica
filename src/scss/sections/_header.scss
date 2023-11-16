@@ -72,6 +72,17 @@
 
 @media (max-width: 991px) {
     .header {
+        &__social-2 {
+            display: flex;
+            gap: 10px;
+            margin-right: 40px;
+            .social__link {
+                span {
+                    font-size: 25px;
+                    line-height: 25px;
+                }
+            }
+        }
         &__list {
             flex-direction: column;
             align-items: center;
