@@ -43,8 +43,9 @@
     }
     &__img {
         position: relative;
-        max-width: 712px;
+        // max-width: 712px;
         // width: 100%;
+        width: 580px;
         height: 600px;
         img {
             width: 100%;
@@ -74,6 +75,10 @@
             // right: -56px;
             bottom: 136px;
         }
+        &__img {
+            width: 458px;
+            height: 580px;
+        }
     }
 }
 
@@ -82,6 +87,7 @@
         .container {
             position: relative;
         }
+
         &__title.title {
             text-align: center;
             margin-top: 0;
@@ -94,6 +100,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+
         }
         &__caption.subtitle {
             position: static;

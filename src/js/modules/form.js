@@ -28,6 +28,11 @@ const form = () => {
   const sendData = async (e) => {
     e.preventDefault();
 
+    const errorElements = f.querySelectorAll(".error-text");
+    errorElements.forEach((errorElement) => {
+      errorElement.remove();
+    });
+
     const contactInput = f.querySelector('[name="contact"]');
 
     const contact = contactInput.value;

@@ -154,13 +154,28 @@
             Работай где хочешь Нужен только смартфон
           </p>
           <div class="intro__social social d-none d-lg-flex">
-            <a href="https://t.me/" class="social__link">
+            <a
+              href="viber://chat?number=%2B"
+              aria-label="Перейти в Viber"
+              target="_blank"
+              class="social__link"
+            >
               <span class="fa-brands fa-viber"></span>
             </a>
-            <a href="https://t.me/" class="social__link">
+            <a
+              href="https://t.me/"
+              target="_blank"
+              class="social__link"
+              aria-label="Перейти в Telegram"
+            >
               <span class="fa-brands fa-telegram"></span>
             </a>
-            <a href="https://t.me/" class="social__link">
+            <a
+              href="https://api.whatsapp.com/send?phone="
+              class="social__link"
+              target="_blank"
+              aria-label="Перейти в Whatsapp"
+            >
               <span class="fa-brands fa-whatsapp"></span>
             </a>
           </div>
@@ -317,7 +332,6 @@
         <button
           class="slider__arrow slider__arrow-prev"
           tabindex="-1"
-          role="button"
           aria-label="Предыдущий слайд"
         >
           <span class="fa-solid fa-angle-left"></span>
@@ -333,7 +347,6 @@
         <button
           class="slider__arrow slider__arrow-next"
           tabindex="0"
-          role="button"
           aria-label="Следующий слайд"
         >
           <span class="fa-solid fa-angle-right"></span>
@@ -1078,7 +1091,7 @@
               </div>
               <p class="feedback__name subtitle subtitle--bold">Kristina</p>
             </div>
-            <time>26 апреля 2022</time>
+            <span>26 апреля 2022</span>
           </div>
           <p class="feedback__comment subtitle">
             Работала здесь 2 месяца пока жила в Питере, хорошая студия лучше чем
@@ -1098,7 +1111,7 @@
               </div>
               <p class="feedback__name subtitle subtitle--bold">Настя</p>
             </div>
-            <time>1 декабря 2022</time>
+            <span>1 декабря 2022</span>
           </div>
           <p class="feedback__comment subtitle">
             Работаю уже полгода в Пинап! Студия норм ))) Удобное расположение
@@ -1117,7 +1130,7 @@
               </div>
               <p class="feedback__name subtitle subtitle--bold">Жанна</p>
             </div>
-            <time>12 сентября 2021</time>
+            <span>12 сентября 2021</span>
           </div>
           <p class="feedback__comment subtitle">
             Есть уборка , деньги платят вовремя , аванс выдают , премируют ,
@@ -1129,10 +1142,14 @@
       </div>
     </div>
     <div class="feedback__buttons">
-      <a href="#" class="feedback__button button button--transparent"
+      <a
+        href="javascript:void(0);"
+        class="feedback__button button button--transparent"
         >Читать все</a
       >
-      <a href="#" class="feedback__button button button">Написать отзыв</a>
+      <a href="javascript:void(0);" class="feedback__button button button"
+        >Написать отзыв</a
+      >
     </div>
   </div>
 </section>
@@ -1287,19 +1304,31 @@
         <p class="footer__caption subtitle subtitle--bold">Социальные сети</p>
         <ul class="footer__social-list d-flex">
           <li class="footer__social-item">
-            <a href="https://youtube.com">
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              aria-label="Перейти в Youtube"
+            >
               <img src="img/youtube.png" alt="youtube" />
               <span class="subtitle">Youtube</span>
             </a>
           </li>
           <li class="footer__social-item">
-            <a href="https://t.me/">
+            <a
+              href="https://t.me/"
+              target="_blank"
+              aria-label="Перейти в Telegram"
+            >
               <img src="img/telegram.png" alt="telegram" />
               <span class="subtitle">Telegram</span>
             </a>
           </li>
           <li class="footer__social-item">
-            <a href="https://twitter.com">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              aria-label="Перейти в Twitter"
+            >
               <img src="img/twitter.png" alt="twitter" />
               <span class="subtitle">Twitter</span>
             </a>
