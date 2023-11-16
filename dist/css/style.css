@@ -1734,6 +1734,13 @@ input, input::placeholder {
   display: none;
 }
 
+.social__link {
+  transition: var(--transition);
+}
+.social__link:hover {
+  opacity: 0.7;
+}
+
 @media (max-width: 767px) {
   :root {
     --title-fz-62: 32px;

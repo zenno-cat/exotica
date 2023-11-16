@@ -1,30 +1,38 @@
 const form = () => {
   const f = document.querySelector(".form");
 
+  const photoInputs = document.querySelectorAll('[name="file"]');
+  if (photoInputs) {
+    photoInputs.forEach((photoInput, index) => {
+      let txt = "";
+      photoInput.addEventListener("change", () => {
+        if ("files" in photoInput) {
+          if (photoInput.files.length == 0) {
+            txt = "Выберите один или несколько файлов";
+          } else {
+            txt = photoInput.files[photoInput.files.length - 1].name + "<br>";
+          }
+        } else {
+          if (photoInput.value == "") {
+            txt += "Выберите один или несколько файлов";
+          } else {
+            txt += "Расширение файла не поддерживается вашим браузером!";
+            txt += "Путь выбранного файла: " + photoInput.value;
+          }
+        }
+        document.querySelectorAll(".form__file-button")[index].innerHTML = txt;
+      });
+    });
+  }
+
   const sendData = async (e) => {
     e.preventDefault();
 
-    const nameInput = f.querySelector('[name="name"]'),
-      contactInput = f.querySelector('[name="contact"]'),
-      ageInput = f.querySelector('[name="age"]'),
-      fileInput = f.querySelector('[name="file"]');
+    const contactInput = f.querySelector('[name="contact"]');
 
-    const name = nameInput.value,
-      contact = contactInput.value,
-      age = ageInput.value;
-    // file = fileInput.files[0];
-
-    const data = {
-      name: null,
-      contact: null,
-      age: null,
-      file: null,
-    };
+    const contact = contactInput.value;
 
     const errors = [];
-
-    data.name = name;
-    data.age = age;
 
     if (!contact) {
       errors.push("Contact is required");
@@ -48,6 +56,8 @@ const form = () => {
       return;
     }
 
+    const formData = new FormData();
+
     try {
       const loader = document.querySelector(".loader");
       const body = document.body;
@@ -58,10 +68,7 @@ const form = () => {
         "https://webhook.site/89b04d04-cd87-4af3-936e-5ff3fb7f2346",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
+          body: formData,
         }
       ).finally(() => {
         const loader = document.querySelector(".loader");

@@ -222,13 +222,12 @@
 @import "./components/_loader";
 
 
-@media (max-width: 1199px) {
-
+.social__link {
+  transition: var(--transition);
+  &:hover {
+    opacity: 0.7;
+  }
 }
-
-@media (max-width: 991px) {
-}
-
 
 @media (max-width: 767px) {
   :root {
