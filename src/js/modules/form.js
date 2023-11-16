@@ -33,6 +33,11 @@ const form = () => {
       errorElement.remove();
     });
 
+    const formErrorElement = f.querySelector(".form__error");
+    if (formErrorElement) {
+      formErrorElement.remove();
+    }
+
     const contactInput = f.querySelector('[name="contact"]');
 
     const contact = contactInput.value;
@@ -53,7 +58,6 @@ const form = () => {
       if (parentElement.querySelector(".error-text")) {
         parentElement.querySelector(".error-text").remove();
       }
-      data.contact = contact;
     }
 
     if (errors.length) {
@@ -93,6 +97,11 @@ const form = () => {
       loader.classList.remove("active");
       body.style.overflow = "auto";
 
+      const formError = document.createElement("p");
+      formError.classList.add("form__error");
+      formError.textContent = "Произошла ошибка отправки формы";
+      const wrapper = f.querySelector(".form__wrapper");
+      wrapper.append(formError);
       console.error("Error fetching data:", error);
     }
   };

@@ -33,6 +33,11 @@
             text-align: right;
             margin-top: var(--form-offset-130);
         }
+        &__error {
+            margin-top: 20px;
+            color: var(--red);
+            text-align: center;
+        }
     }
 
     .inputs__wrapper {
@@ -126,10 +131,15 @@
                 // height: 255px;
                 height: 290px;
             }
+            &__error {
+                margin-top: 20px;
+                text-align: center;
+            }
         }
         .file__button-wrapper {
             flex-direction: column;
         }
+        
     }
 }
 

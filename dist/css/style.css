@@ -1126,6 +1126,11 @@ input, input::placeholder {
   text-align: right;
   margin-top: var(--form-offset-130);
 }
+.bid .form__error {
+  margin-top: 20px;
+  color: var(--red);
+  text-align: center;
+}
 .bid .inputs__wrapper {
   margin-top: var(--form-margin-y-16);
   display: flex;
@@ -1201,6 +1206,10 @@ input, input::placeholder {
   .bid .form__column-right {
     position: relative;
     height: 290px;
+  }
+  .bid .form__error {
+    margin-top: 20px;
+    text-align: center;
   }
   .bid .file__button-wrapper {
     flex-direction: column;
