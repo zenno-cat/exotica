@@ -1,0 +1,24 @@
+.policy {
+    padding-top: 170px;
+    &__content {
+        a {
+            display: inline;
+        }
+        p {
+            margin: 10px 0px;
+
+            strong {
+                font-size: var(--subtitle-fz-24);
+                font-weight: var(--subtitle-lh-26);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .policy {
+        padding-top: 78px;
+    
+}
+}

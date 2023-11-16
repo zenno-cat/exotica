@@ -1211,6 +1211,26 @@ input, input::placeholder {
     height: 255px;
   }
 }
+.policy {
+  padding-top: 170px;
+}
+.policy__content a {
+  display: inline;
+}
+.policy__content p {
+  margin: 10px 0px;
+}
+.policy__content p strong {
+  font-size: var(--subtitle-fz-24);
+  font-weight: var(--subtitle-lh-26);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .policy {
+    padding-top: 78px;
+  }
+}
 .footer {
   padding-top: var(--section-padding-top-110);
   padding-bottom: var(--section-padding-top-110);
