@@ -1,0 +1,125 @@
+.intro {
+    padding-top: 170px;
+    padding-bottom: var(--section-padding-bottom-110);
+    background: var(--gradient);
+    &__wrapper {
+        gap: 38px;
+    }
+    &__col-2 {
+        position: relative;
+    }
+    &__social {
+        position: absolute;
+        right: -56px;
+        bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid var(--brown);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+    &__title.title {
+        text-transform: uppercase;
+        text-align: left;
+        margin-top: 75px;
+    }
+    &__subtitle {
+        margin-top: var(--intro-margin-top-24);
+    }
+    &__button.button {
+        width: 250px;
+        margin-top: 64px; //mobile 40px
+    }
+    &__img {
+        position: relative;
+        max-width: 712px;
+        // width: 100%;
+        height: 600px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__caption.subtitle {
+        position: absolute;
+        right: -32px;
+        top: 167px;
+        font-family: var(--forum);
+        max-width: 200px;
+        text-transform: uppercase;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .intro {
+        &__caption.subtitle {
+            right: -64px;
+            top: 167px;
+        }
+        &__social {
+            position: absolute;
+            // right: -56px;
+            bottom: 136px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .intro {
+        .container {
+            position: relative;
+        }
+        &__title.title {
+            text-align: center;
+            margin-top: 0;
+        }
+        &__subtitle.subtitle {
+            text-align: center;
+
+        }
+        &__img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__caption.subtitle {
+            position: static;
+            max-width: 413px;
+            text-align: center;
+            margin-top: 16px;
+        }
+        &__button.button {
+            width: 250px;
+            position: absolute;
+            bottom: -140px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .intro {
+        padding-top: 78px;
+        padding-bottom: 140px;
+        &__button.button {
+            bottom: -77px;
+        }
+        &__img {
+            height: auto;
+        }
+    }
+}
